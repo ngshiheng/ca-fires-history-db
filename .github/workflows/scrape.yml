@@ -8,9 +8,10 @@ on:
             - "**.py"
             - ".github/workflows/**"
             - Makefile
-    workflow_dispatch:
+
+    workflow_dispatch: # This allows us to trigger manually from the GitHub Actions UI
     schedule:
-        - cron: "0 * * * *" # Scheduled to run every hour
+        - cron: "0 * * * *" # Run every hour
 
 jobs:
     scrape-and-build:
@@ -22,7 +23,7 @@ jobs:
             - name: Set up python
               uses: actions/setup-python@v5
               with:
-                  python-version: 3.11
+                  python-version: 3.14
 
             # Step to get the latest artifact run ID
             # Fetch the latest artifact run ID using GitHub API and jq
@@ -44,7 +45,7 @@ jobs:
               continue-on-error: false
 
             - name: Display downloaded file
-              run: ls data/
+              run: ls -la data/
 
             - name: Run scrape.py
               run: make run
