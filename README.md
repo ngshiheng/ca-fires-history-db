@@ -1,6 +1,6 @@
 # CA Fires History DB
 
-Tracking historical fire data from www.fire.ca.gov/incidents.
+Tracking historical data of wildfires in California, sourced from [CAL FIRE](http://www.fire.ca.gov/).
 
 This project is inspired by and adapts the work from [simonw/ca-fires-history](https://github.com/simonw/ca-fires-history). Instead of using [Git scraping](https://simonwillison.net/2020/Oct/9/git-scraping/), this project stores the data in a SQLite database and uses GitHub artifacts for storage.
 
