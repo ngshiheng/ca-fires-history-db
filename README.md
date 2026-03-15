@@ -1,6 +1,6 @@
-# California Fires History DB
+# CA Fires History DB
 
-Tracking fire data from www.fire.ca.gov/incidents.
+Tracking historical fire data from www.fire.ca.gov/incidents.
 
 This project is inspired by and adapts the work from [simonw/ca-fires-history](https://github.com/simonw/ca-fires-history). Instead of using [Git scraping](https://simonwillison.net/2020/Oct/9/git-scraping/), this project stores the data in a SQLite database and uses GitHub artifacts for storage.
 
@@ -25,7 +25,7 @@ graph TB
     subgraph CAL FIRE
         api[API]
     end
-    subgraph DockerHub
+    subgraph Docker
         dockerhub[Docker Hub]
     end
     db --> |1: Download| scraper
